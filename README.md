@@ -63,8 +63,9 @@ Before using the API, you will need to set the key and secret in as environment 
 
 This should be hardcoded for debugging purposes only, not in production.
 The environment variable are required to make any authorized call to *S3* using aws-sdk
-You should set your region as well.
-AWS.config.region = 'us-west-2';
+You should set your region as well like so:
+
+`AWS.config.region = 'us-west-2';`
 
 ####Getting a File/Object
 To get files from your storage (assuming you didn't make your bucket public). Create a new instance of the *S3* class and call the getObject function as shown below.
