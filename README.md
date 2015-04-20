@@ -51,8 +51,9 @@ Still from the _Security Credentials_, select the Users menu on the left and cre
 ###API
 ####_nodejs_
 
-You will need the aws-sdk package available on npm via npm install aws-sdk.
-var AWS = require('aws-sdk');
+You will need the aws-sdk package available on npm via `npm install aws-sdk`.
+
+`var AWS = require('aws-sdk');`
 
 Before using the API, you will need to set the key and secret in as environment variables as below:
 
