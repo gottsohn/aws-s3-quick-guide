@@ -1,0 +1,23 @@
+{
+  "name": "aws-s3-quick-guide",
+  "version": "0.0.1",
+  "description": "Amazon s3, zero to a hundred real quick, with nodejs",
+  "main": "index.js",
+  "engines": {
+    "node": "0.10.31",
+    "npm": "1.4.23"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andela-gukpere/aws-s3-quick-guide"
+  },
+  "author": "andela-gukpere",
+  "license": "APACHE",
+  "homepage": "http://www.example.com",
+  "dependencies": {
+    "aws-sdk": "^2.1.24"
+  }
+}
