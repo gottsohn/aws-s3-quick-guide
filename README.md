@@ -35,16 +35,16 @@ Under the Permissions Panel, click on the Add Policy or Edit Policy and paste th
 This will make the files `my-bucket` public.
 NOTE: Directory browsing is not allowed, only files can be viewed.
 
-For authorized usage you will be need to create a user will the pertinent permission's policy or create a root key _(not recommened)_.
-Both can be created from the _Security Credentials_ page, the link can be found from the drop down menu under your full name.
+For authorized usage you will be need to create a user _(recommended)_ with the pertinent permission's policy or create a root key _(not recommened)_.
+Both can be created from the _Security Credentials_ page, the link can be found from the drop down menu under your full name in the page header.
 
 #####Root Keys
-To create root keys expand the _Access Keys (Access Key ID and Secret Access Key)_ pane and add a new key. After creating an key, you are prompted to download a .csv containing the KEY and SECRET as the SECRET cannot be previewed ever again on the pane. It can only be removed/disabled.
+To create root keys expand the _Access Keys (Access Key ID and Secret Access Key)_ pane and add a new key. After creating a key, you are prompted to download a `.csv` file containing the KEY and SECRET as the SECRET cannot be previewed ever again on the pane. It can only be removed or disabled.
 
 From the above you will be able to get a _AWS_ACCESS_KEY_ID_ and _AWS_SECRET_ACCESS_KEY_ with root access, and can be used for all operations with the API.
 
 #####User Keys
-Still from the _Security Credentials_, select the Users menu on the left and create a new User. The user has the same key format as the Root Key above, only that the policy of Group attached to a user is responsible for the permission the user account has.
+Still from the _Security Credentials_ page, select the Users menu on the left and create a new User. The _user_ has the same key format as the _Root Key_ above, only that the policy or Group attached to a _user_ is responsible for the _permission_ that user account possess. Multiple policies can be added to a single _user_, as the case may be.
 
 
 
