@@ -58,6 +58,7 @@ You will need the aws-sdk package available on npm via `npm install aws-sdk`.
 Before using the API, you will need to set the key and secret in as environment variables as below:
 
 `process.env.AWS_ACCESS_KEY_ID = "AWS_ACCESS_KEY_ID";`
+
 `process.env.AWS_SECRET_ACCESS_KEY = "AWS_SECRET_ACCESS_KEY";`
 
 This should be hardcoded for debugging purposes only, not in production.
