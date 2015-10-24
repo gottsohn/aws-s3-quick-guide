@@ -15,7 +15,7 @@ You might want to make your bucket public, making all the files/documents upload
 To make your bucket public follow these steps:
 Assuming our bucket name is `my-bucket`, go to the bucket properties (right clicking and selecting properties)
 Under the Permissions Panel, click on the Add Policy or Edit Policy and paste the below Policy JSON Object
-```
+```js
 {
   "Version": "2008-10-17",
   "Statement": [
@@ -55,13 +55,16 @@ You will need the aws-sdk package available on npm via `npm install aws-sdk`.
 
 `var AWS = require('aws-sdk');`
 
-Before using the API, you will need to set the key and secret in as environment variables as below:
+Before using the API, you will need to set the key and secret in as environment variables as below for debugging:
 
-`process.env.AWS_ACCESS_KEY_ID = "AWS_ACCESS_KEY_ID";`
+```js
+process.env.AWS_ACCESS_KEY_ID = "AWS_ACCESS_KEY_ID";
+process.env.AWS_SECRET_ACCESS_KEY = "AWS_SECRET_ACCESS_KEY";
+```
 
-`process.env.AWS_SECRET_ACCESS_KEY = "AWS_SECRET_ACCESS_KEY";`
+This should be hardcoded for debugging purposes only, not in production. 
+*_Exposing your configuration to git or any version control system post a Security Risk to your application._*
 
-This should be hardcoded for debugging purposes only, not in production.
 The environment variable are required to make any authorized call to *S3* using aws-sdk
 You should set your region as well like so:
 
@@ -70,7 +73,7 @@ You should set your region as well like so:
 ####Getting a File/Object
 To get files from your storage (assuming you didn't make your bucket public). Create a new instance of the *S3* class and call the getObject function as shown below.
 
-```
+```js
 var s3 = new AWS.S3();
 s3.getObject({
     Bucket: 'my-bucket',
@@ -91,7 +94,7 @@ It's advisable to attempt to create a bucket first before uploading a file, if t
 The `Body` and `Key` values should be passed into the upload function as it's first argument, an object, as below.
 
 
-```
+```js
 var s3bucket = new AWS.S3({
     params: {
       Bucket: 'my-bucket'
@@ -120,7 +123,7 @@ s3bucket.createBucket(function() {
 
 Deleting a file is pretty easy, as seen below
 
-```
+```js
 var s3 = new AWS.S3();
 s3.deleteObject({
     Bucket: 'my-bucket',
