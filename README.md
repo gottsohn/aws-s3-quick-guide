@@ -63,7 +63,7 @@ process.env.AWS_SECRET_ACCESS_KEY = "AWS_SECRET_ACCESS_KEY";
 ```
 
 This should be hardcoded for debugging purposes only, not in production. 
-*_Exposing your configuration to git or any version control system post a Security Risk to your application._*
+*_Exposing your configuration to git or any version control system can pose a Security Risk to your application._*
 
 The environment variable are required to make any authorized call to *S3* using aws-sdk
 You should set your region as well like so:
