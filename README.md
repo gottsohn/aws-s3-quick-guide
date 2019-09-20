@@ -1,7 +1,7 @@
 AMAZON S3 QUICK GUIDE
 ---------------------
 
-###Registration
+### Registration
 Visit http://aws.amazon.com/s3/ to sign up. Enter valid credit card details as it's required for your account to be enabled.
 
 
@@ -10,7 +10,7 @@ Select the *S3* service under the list of Services.
 Firstly you will want to create a bucket, which will be a sub-domain in the region's domain address your *S3* service will run on.
 
 
-###Usage
+### Usage
 You might want to make your bucket public, making all the files/documents uploaded to it, visible to the public, else it'll return a 403 Unauthorized Access if opened in your browser without the pertinent authentication.
 To make your bucket public follow these steps:
 Assuming our bucket name is `my-bucket`, go to the bucket properties (right clicking and selecting properties)
@@ -43,13 +43,13 @@ To create root keys expand the _Access Keys (Access Key ID and Secret Access Key
 
 From the above you will be able to get a _AWS_ACCESS_KEY_ID_ and _AWS_SECRET_ACCESS_KEY_ with root access, and can be used for all operations with the API.
 
-#####User Keys
+##### User Keys
 Still from the _Security Credentials_ page, select the Users menu on the left and create a new User. The _user_ has the same key format as the _Root Key_ above, only that the policy or Group attached to a _user_ is responsible for the _permission_ that user account possess. Multiple policies can be added to a single _user_, as the case may be.
 
 
 
-###API
-####_nodejs_
+### API
+#### _nodejs_
 
 You will need the aws-sdk package available on npm via `npm install aws-sdk`.
 
@@ -70,7 +70,7 @@ You should set your region as well like so:
 
 `AWS.config.region = 'us-west-2';`
 
-####Getting a File/Object
+#### Getting a File/Object
 To get files from your storage (assuming you didn't make your bucket public). Create a new instance of the *S3* class and call the getObject function as shown below.
 
 ```js
@@ -88,7 +88,7 @@ s3.getObject({
 });
 ```
 
-####Uploading a File/Object
+#### Uploading a File/Object
 
 It's advisable to attempt to create a bucket first before uploading a file, if the bucket exists, the process continues as it should.
 The `Body` and `Key` values should be passed into the upload function as it's first argument, an object, as below.
@@ -119,7 +119,7 @@ s3bucket.createBucket(function() {
 });
 ```
 
-###Deleting a File/Object
+### Deleting a File/Object
 
 Deleting a file is pretty easy, as seen below
 
